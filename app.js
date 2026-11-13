@@ -172,6 +172,9 @@ else if(h=="fehler"){$("#n2").classList.add("on");quiz("f",1)}
 else if(h=="karten"){$("#n2").classList.add("on");cards()}
 else if(h=="kartenueben"){$("#n2").classList.add("on");cardsPractice(1)}
 else if(h=="faelle"){$("#n6").classList.add("on");faelle()}
+else if(h=="werkstatt"){$("#n6").classList.add("on");werkstatt()}
+else if(h.indexOf("ws_")==0){$("#n6").classList.add("on");wsFall(h.slice(3))}
+else if(h.indexOf("det_")==0){$("#n6").classList.add("on");det(h.slice(4))}
 else if(h=="methode"){$("#n6").classList.add("on");methode()}
 else if(h=="sismethode"){$("#n6").classList.add("on");sismethode()}
 else if(h.indexOf("fall_")==0){$("#n6").classList.add("on");fall(h.slice(5))}
