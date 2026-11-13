@@ -98,7 +98,7 @@ var QB={
 ["Welcher Qualitätsdimension gehört die Dekubitusrate an?",["Ergebnisqualität","Strukturqualität","Prozessqualität","Keiner der drei"],0,"Sie misst das Ergebnis der Pflege."]
 ],
 "amg":[
-["Welche Punkte gehören zur 6-R-Regel? (mehrere richtig)",["Richtige Person","Richtige Dosis","Richtige Applikation","Richtige Tablettenfarbe"],[0,1,2],"Außerdem: richtiges Arzneimittel, richtiger Zeitpunkt, richtige Dokumentation."],
+["Welche Punkte gehören zu den Kernpunkten der 6-R-/10-R-Regel? (mehrere richtig)",["Richtige Person","Richtige Dosis","Richtige Applikation","Richtige Tablettenfarbe"],[0,1,2],"Außerdem: richtiges Arzneimittel, richtiger Zeitpunkt, richtige Dokumentation. Die 10-R-Regel ergänzt weitere Prüfpunkte."],
 ["Welche Präparate dürfen nicht zerkleinert oder geteilt werden?",["Retard- und magensaftresistente Präparate","Alle Tabletten","Brausetabletten","Tropfen"],0,"Die Wirkstofffreisetzung würde verändert, Überdosierung oder Magenreizung sind möglich."],
 ["Bei der Medikamentengabe ist ein Fehler passiert. Was ist richtig?",["Sofort ärztlich informieren, dokumentieren und im Fehlermeldesystem erfassen","Verschweigen, wenn kein Schaden sichtbar ist","Selbst gegensteuern und nichts melden","Erst bei der nächsten Teamsitzung ansprechen"],0,"Fehler offen melden schützt die Person und ermöglicht Lernen im System."]
 ],
@@ -125,7 +125,7 @@ var QB={
 "team":[
 ["Pflegefachperson und Praxisanleitung arbeiten zusammen. Wie nennt man das?",["Intradisziplinär","Interdisziplinär","Delegation","Substitution"],0,"Innerhalb derselben Berufsgruppe: intradisziplinär."],
 ["Wofür steht SBAR?",["Situation, Background, Assessment, Recommendation","Struktur, Beratung, Anleitung, Reflexion","Schicht, Bericht, Anordnung, Rückmeldung","Sicherheit, Bedarf, Auftrag, Ressourcen"],0,"Ein Schema für strukturierte Übergaben."],
-["Bringe die Teamphasen nach Tuckman in die richtige Reihenfolge.",["Forming","Storming","Norming","Performing"],"o","Orientierung, Konflikt, Regelfindung, Leistung."]
+["Bringe die Teamphasen in die richtige Reihenfolge.",["Forming (Orientierung)","Storming (Konflikt)","Norming (Regelfindung)","Performing (Leistung)","Adjourning (Abschluss/Auflösung)"],"o","Das Fachbuch beschreibt fünf Phasen, die ursprünglichen vier nach Tuckman plus Adjourning."]
 ],
 "bel":[
 ["Welche Maßnahme ist Verhältnisprävention?",["Verlässliche Dienstpläne","Rückenschule","Entspannungstraining","Meditations-App für Mitarbeitende"],0,"Verhältnisprävention verändert Arbeitsbedingungen, Verhaltensprävention das Verhalten der Person."],
