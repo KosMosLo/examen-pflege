@@ -1,5 +1,5 @@
 /* Fälle-Tab: Methode, SIS-Erklärung, Fallbearbeitung mit eigener Lösung, Musterlösung und Checkliste */
-var FST="width:100%;font:inherit;padding:10px;border-radius:10px;border:1px solid var(--l);background:var(--bg);color:var(--t);margin:4px 0 6px";
+var FST="width:100%;font:inherit;padding:10px;border-radius:10px;border:1px solid var(--l);background:var(--c2);color:var(--t);margin:4px 0 6px";
 function fx(){S.fa=S.fa||{};return S.fa}
 function fcase(id){var f=fx();return f[id]||(f[id]={a:{},c:{},done:0})}
 function lst(a){return"<ul>"+a.map(function(x){return"<li>"+esc(x)+"</li>"}).join("")+"</ul>"}
@@ -49,7 +49,7 @@ var FSTEPS=[["info","1. Informationen sammeln","Sortiere die Angaben aus dem Fal
 function fall(id){var c=CASES.filter(function(x){return x.id==id})[0];if(!c)return faelle();var d=fcase(id);
 var h='<p><a href="#faelle">← Zurück</a></p><div class="card"><h2>'+esc(c.titel)+'</h2><p class="m">'+esc(c.setting)+'</p><p>'+esc(c.text)+'</p></div>';
 FSTEPS.forEach(function(s){var key=s[0],g=key=="sis"?GEN.mass:GEN[key];
-h+='<div class="card"><h3 style="margin-top:0">'+esc(s[1])+'</h3><p>'+esc(s[2])+'</p><textarea id="a_'+key+'" rows="5" placeholder="Deine Lösung …" style="'+FST+'"></textarea><div class="row"><button class="btn g" data-sol="'+key+'">Musterlösung zeigen</button></div><div id="s_'+key+'" style="display:none"><div class="card" style="background:var(--bg)">'+sol(c,key)+'</div><h3>Prüfe deine Lösung</h3>'+(key=="sis"?'':g.map(function(x,i){return'<label style="display:block;margin:6px 0"><input type="checkbox" data-c="'+key+'" data-i="'+i+'"> '+esc(x)+'</label>'}).join(""))+'</div></div>'});
+h+='<div class="card"><h3 style="margin-top:0">'+esc(s[1])+'</h3><p>'+esc(s[2])+'</p><textarea id="a_'+key+'" rows="5" placeholder="Deine Lösung …" style="'+FST+'"></textarea><div class="row"><button class="btn g" data-sol="'+key+'">Musterlösung zeigen</button></div><div id="s_'+key+'" style="display:none"><div class="card" style="background:var(--c2)">'+sol(c,key)+'</div><h3>Prüfe deine Lösung</h3>'+(key=="sis"?'':g.map(function(x,i){return'<label style="display:block;margin:6px 0"><input type="checkbox" data-c="'+key+'" data-i="'+i+'"> '+esc(x)+'</label>'}).join(""))+'</div></div>'});
 h+='<div class="card"><h3 style="margin-top:0">Hinweis zum Fall</h3><p>'+esc(c.tipp)+'</p><div class="row"><button class="btn" id="fdone">'+(d.done?"Als offen markieren":"Fall abgeschlossen")+'</button></div><p class="m">Wiederhole den Fall nach einer Woche und schreibe die Lösung ohne Vorlage neu.</p></div>';
 app.innerHTML=h;
 FSTEPS.forEach(function(s){var key=s[0],ta=$("#a_"+key);ta.value=d.a[key]||"";ta.oninput=function(){d.a[key]=ta.value;sv()}});
