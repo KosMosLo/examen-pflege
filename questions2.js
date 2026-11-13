@@ -157,7 +157,7 @@ var QB2={
 ["Was ist moralischer Stress?",["Konflikt, wenn man weiß, was richtig wäre, aber nicht danach handeln kann","Streit mit Kolleginnen","Freude an der Arbeit","Zeitdruck allein"],0,"Er entsteht z. B. durch Personalmangel."]
 ],
 "ausl":[
-["Warum ist der WHO-Kodex für die Anwerbung relevant?",["Er verlangt faire Anwerbung ohne Schaden für Länder mit eigenem Personalmangel","Er legt Gehälter fest","Er regelt Visaprozesse","Er verbietet jede Zuwanderung"],0,"Ethische Anwerbung schützt Herkunftsländer."],
+["Warum ist der WHO-Kodex für die Anwerbung relevant?",["Er empfiehlt faire Anwerbung ohne Schaden für Länder mit eigenem Personalmangel (nicht rechtsverbindlich)","Er legt Gehälter fest","Er regelt Visaprozesse","Er verbietet jede Zuwanderung"],0,"Ethische Anwerbung schützt Herkunftsländer."],
 ["Welche Sprachanforderung ist typisch?",["B2 plus Fachsprache","A1","C2 ohne Fachsprache","Keine"],0,"Länder können abweichen."],
 ["Eine Kollegin mit abweichender Ausbildung muss Defizite ausgleichen. Wie heißt das?",["Anpassungsmaßnahme oder Kenntnisprüfung","Promotion","Einbürgerung","Delegation"],0,"Bei Drittstaaten Gleichwertigkeitsprüfung mit Ausgleichsmöglichkeit."],
 ["Welche Risiken können bei mangelnder Integration auftreten? (mehrere richtig)",["Überforderung","Diskriminierung","Hohe Fluktuation","Bessere Teamdynamik"],[0,1,2],"Mentoring und Einarbeitung beugen vor."]
