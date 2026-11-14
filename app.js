@@ -39,13 +39,13 @@ return d}
 
 /* ---------- Themenliste und Themenseite ---------- */
 var flt="A";
-function list(){var n=C.filter(function(t){return S.d[t[0]]}).length,h='<h1>Staatsexamen Pflege</h1><div class="bar"><i style="width:'+Math.round(n/C.length*100)+'%"></i></div><p class="m">'+n+' von '+C.length+' Themen gelernt · <a href="#fehler">Fehler wiederholen</a></p><div class="row">';
+function list(){var n=C.filter(function(t){return S.d[t[0]]}).length,h='<h1>Staatsexamen Pflege</h1><div class="bar"><i style="width:'+Math.round(n/C.length*100)+'%"></i></div><p class="m">'+n+' von '+C.length+' Themen gelernt · <a href="#fehler">Fehler wiederholen</a> · <a href="#videos">Videos</a></p><div class="row">';
 [["A","Alle"],["S","Schriftlich"],["M","Mündlich"],["E","Extra"]].forEach(function(f){h+='<span class="chip'+(flt==f[0]?" on":"")+'" data-f="'+f[0]+'">'+f[1]+'</span>'});
 h+='</div>';T.filter(function(t){return flt=="A"||t[1].indexOf(flt)>-1}).forEach(function(t){h+='<a class="card item" href="#'+t[0]+'"><span>'+(S.d[t[0]]?"✓ ":"")+esc(t[2])+'</span><span>'+t[1].split("").map(function(c){return'<span class="tag"'+(c=="E"?' style="background:#f59e0b;color:#1d2430"':'')+'>'+(c=="E"?"Extra":c)+'</span>'}).join("")+'</span></a>'});
 app.innerHTML=h+'<p class="m">S = schriftlich, M = mündlich, Extra = zusätzlich hilfreich, nicht auf deiner Themenliste. Lernhilfe, ersetzt keine Unterrichtsunterlagen.</p>';
 app.querySelectorAll(".chip").forEach(function(c){c.onclick=function(){flt=c.dataset.f;list()}})}
 function topic(id){var t=T.filter(function(x){return x[0]==id})[0];if(!t)return list();
-var h='<p><a href="#themen">← Zurück</a></p><div class="card"><h2>'+esc(t[2])+'</h2>'+(t[1]=="E"?'<p class="tag" style="display:inline-block;background:#f59e0b;color:#1d2430;margin:0 0 6px">Extra-Thema: nicht auf deiner Liste, aber hilfreich</p>':'')+'<h3>Kurz &amp; klar</h3><ul>'+t[3].map(function(p){return'<li>'+esc(p)+'</li>'}).join("")+'</ul>'+deep(id)+'<h3>Teste dich</h3><div id="q"></div><h3>Meine Notizen</h3><textarea id="nt" rows="4" placeholder="Eigene Notizen, Beispiele aus dem Einsatz, Merkhilfen …" style="width:100%;font:inherit;padding:10px;border-radius:10px;border:1px solid var(--l);background:var(--c2);color:var(--t)"></textarea><h3>Quellen zum Nachlesen</h3><ul>'+
+var h='<p><a href="#themen">← Zurück</a></p><div class="card"><h2>'+esc(t[2])+'</h2>'+(t[1]=="E"?'<p class="tag" style="display:inline-block;background:#f59e0b;color:#1d2430;margin:0 0 6px">Extra-Thema: nicht auf deiner Liste, aber hilfreich</p>':'')+'<h3>Kurz &amp; klar</h3><ul>'+t[3].map(function(p){return'<li>'+esc(p)+'</li>'}).join("")+'</ul>'+deep(id)+vidTopic(id)+'<h3>Teste dich</h3><div id="q"></div><h3>Meine Notizen</h3><textarea id="nt" rows="4" placeholder="Eigene Notizen, Beispiele aus dem Einsatz, Merkhilfen …" style="width:100%;font:inherit;padding:10px;border-radius:10px;border:1px solid var(--l);background:var(--c2);color:var(--t)"></textarea><h3>Quellen zum Nachlesen</h3><ul>'+
 t[5].map(function(s){return'<li>'+(s[1]?'<a href="'+esc(s[1])+'" target="_blank" rel="noopener noreferrer">'+esc(s[0])+'</a>':esc(s[0]))+'</li>'}).join("")+'</ul><div class="row"><button class="btn" id="dn">'+(S.d[id]?"Als offen markieren":"Als gelernt markieren")+'</button></div></div>';
 app.innerHTML=h;
 ALLQ.filter(function(x){return x.t[0]==id}).forEach(function(x,i){var w=document.createElement("div");w.style.cssText="margin:10px 0;padding-top:10px"+(i?";border-top:1px solid var(--l)":"");w.appendChild(qz(x));$("#q").appendChild(w)});
@@ -180,6 +180,7 @@ else if(h=="sismethode"){$("#n6").classList.add("on");sismethode()}
 else if(h.indexOf("fall_")==0){$("#n6").classList.add("on");fall(h.slice(5))}
 else if(h=="plan"){$("#n4").classList.add("on");plan()}
 else if(h=="muendlich"){$("#n5").classList.add("on");oral()}
+else if(h=="videos"){$("#n1").classList.add("on");videosPage()}
 else if(h=="info"){$("#n3").classList.add("on");info()}
 else if(h&&h!="themen"){$("#n1").classList.add("on");topic(h)}
 else{$("#n1").classList.add("on");list()}}
